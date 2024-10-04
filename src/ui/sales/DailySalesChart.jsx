@@ -4,8 +4,8 @@ import {
   Typography,
 } from "@mui/material";
 import {
-  Area,
-  AreaChart,
+  Bar,
+  BarChart,
   CartesianGrid,
   ResponsiveContainer,
   Tooltip,
@@ -13,17 +13,17 @@ import {
   YAxis,
 } from "recharts";
 
-const monthlySalesData = [
-  { month: "Jan", sales: 4000 },
-  { month: "Feb", sales: 3000 },
-  { month: "Mar", sales: 5000 },
-  { month: "Apr", sales: 4500 },
-  { month: "May", sales: 6000 },
-  { month: "Jun", sales: 5500 },
-  { month: "Jul", sales: 7000 },
+const dailySalesData = [
+  { name: "Mon", sales: 1000 },
+  { name: "Tue", sales: 1200 },
+  { name: "Wed", sales: 900 },
+  { name: "Thu", sales: 1100 },
+  { name: "Fri", sales: 1300 },
+  { name: "Sat", sales: 1600 },
+  { name: "Sun", sales: 1400 },
 ];
 
-export default function SalesOverviewChart() {
+export default function DailySalesChart() {
   return (
     <Card sx={{ borderRadius: "10px", padding: "1.5rem" }}>
       <CardContent>
@@ -34,17 +34,13 @@ export default function SalesOverviewChart() {
             fontWeight: "700",
           }}
         >
-          Sales Overview
+          Daily Sales
         </Typography>
         <ResponsiveContainer height={300}>
-          <AreaChart data={monthlySalesData}>
-            <CartesianGrid
-              strokeDasharray="3 3"
-              stroke="#374151"
-            />
-            <XAxis dataKey="month" stroke="#9CA3AF" />
-            <YAxis stroke="#9CA3AF" />
-
+          <BarChart data={dailySalesData}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey={"name"} />
+            <YAxis />
             <Tooltip
               contentStyle={{
                 backgroundColor: "rgba(31, 41, 55, 0.8)",
@@ -52,14 +48,12 @@ export default function SalesOverviewChart() {
               }}
               itemStyle={{ color: "#E5E7EB" }}
             />
-            <Area
-              type="monotone"
-              dataKey="sales"
-              stroke="#8B5CF6"
-              fill="#8B5CF6"
-              fillOpacity={0.2}
+            <Bar
+              dataKey={"sales"}
+              fill="
+#10B981"
             />
-          </AreaChart>
+          </BarChart>
         </ResponsiveContainer>
       </CardContent>
     </Card>

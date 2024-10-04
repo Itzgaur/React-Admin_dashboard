@@ -1,5 +1,4 @@
 import SummaryBoard from "../ui/common/SummaryBoard";
-import ProductTable from "../ui/products/ProductTable";
 import Userstable from "../ui/users/UsersTable";
 import { MainContainer } from "./Overview";
 import { PageLayout } from "./Products";
