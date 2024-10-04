@@ -48,12 +48,12 @@ const SIDEBAR_ITEMS = [
     color: "#3B82F6",
     href: "/analytics",
   },
-  {
-    name: "Settings",
-    icon: Settings,
-    color: "#6EE7B7",
-    href: "/settings",
-  },
+  // {
+  //   name: "Settings",
+  //   icon: Settings,
+  //   color: "#6EE7B7",
+  //   href: "/settings",
+  // },
 ];
 
 const OuterContainer = styled.div`

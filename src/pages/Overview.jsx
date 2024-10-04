@@ -12,14 +12,6 @@ export const MainContainer = styled.main`
   padding: 0.5rem;
 `;
 
-// export const StatsContainer = styled.div`
-//   display: grid;
-//   grid-template-columns: repeat(4, 1fr);
-//   gap: 2rem;
-//   margin-left: 1rem;
-//   margin-right: 1rem;
-// `;
-
 export const Chartscontainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
